@@ -1,0 +1,58 @@
+INDEX.JS
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+let v='';
+let time1= new Date().getHours();
+const heading={
+  backgroundColor:'yellow'
+}
+
+if(time1>=1 && time1<12)
+{
+   v = "Good morning";
+   heading.color='black';
+   heading.textTransform='capitalize';
+}else if(time1>=12 && time1<=19){
+    v="good afternoon";
+    heading.color='red';
+    heading.textTransform='capitalize'
+}else{
+  v='Good Night';
+  heading.color='green';
+   heading.textTransform='capitalize';
+}
+
+ReactDOM.render(
+       <> 
+       <div>
+       <h1>Hello sir,<span style={heading}> {v}</span></h1>
+         </div>
+         </>,
+         document.getElementById("root")
+         );                                                
+
+
+INDEX.CSS
+
+*{
+    background-color: cyan;
+    margin:0%;
+    padding: 0%;
+}
+div{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+div h1{
+    padding: 10px;
+    background-color: rgb(238, 255, 0);
+    color: darksalmon;
+    border-radius: 10px;
+}
